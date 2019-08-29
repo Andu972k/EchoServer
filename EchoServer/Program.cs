@@ -4,7 +4,7 @@ namespace EchoServer
 {
     class Program
     {
-        void Main(string[] args)
+        static void Main(string[] args)
         {
             
             Server server = new Server();
