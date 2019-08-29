@@ -27,19 +27,27 @@ namespace EchoServer
             while (true)
             {
                 TcpClient socket = server.AcceptTcpClient();
-                Stream ns = socket.GetStream();
-                using (StreamReader sr = new StreamReader(ns))
-                using (StreamWriter sw = new StreamWriter(ns))
-                {
-                    string line = sr.ReadLine();
-                    sw.WriteLine(line);
-                    sw.Flush();
+                DoClient(socket);
 
-                }
-                
+
             }
 
             
+        }
+
+        public void DoClient(TcpClient socket)
+        {
+            
+            Stream ns = socket.GetStream();
+            using (StreamReader sr = new StreamReader(ns))
+            using (StreamWriter sw = new StreamWriter(ns))
+            {
+                string line = sr.ReadLine();
+                sw.WriteLine(line);
+                sw.Flush();
+
+            }
+
         }
 
         #endregion
