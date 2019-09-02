@@ -33,14 +33,17 @@ namespace EchoClient
             using (StreamReader reader = new StreamReader(ns))
             using (StreamWriter writer = new StreamWriter(ns))
             {
-                string messageToBeSent = "Hello User";
+                string messageToBeSent = "Hello User, how is your day";
 
                 writer.WriteLine(messageToBeSent);
                 writer.Flush();
 
                 string response = reader.ReadLine();
                 Console.WriteLine(response);
+                string response2 = reader.ReadLine();
+                Console.WriteLine(response2);
 
+                
 
             }
             

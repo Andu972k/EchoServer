@@ -9,6 +9,8 @@ namespace EchoClient
             Client myClient = new Client();
 
             myClient.Start();
+
+            Console.ReadLine();
         }
     }
 }

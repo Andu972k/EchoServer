@@ -41,7 +41,25 @@ namespace EchoServer
             using (StreamWriter sw = new StreamWriter(ns))
             {
                 string line = sr.ReadLine();
+
+                int numberOfWords = 1;
+
+                for (int index = 0; index < line.Length; index++)
+                {
+                    if (line[index].Equals(' ') && index != line.Length -1 && !line[index + 1].Equals(' '))
+                    {
+                        
+                            numberOfWords++;
+                        
+                        
+                    }
+                    
+                    
+                }
+
+                
                 sw.WriteLine(line);
+                sw.WriteLine(numberOfWords);
                 sw.Flush();
 
             }
