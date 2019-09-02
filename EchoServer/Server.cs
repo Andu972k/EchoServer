@@ -28,8 +28,6 @@ namespace EchoServer
             {
                 TcpClient socket = server.AcceptTcpClient();
                 DoClient(socket);
-
-
             }
 
             
